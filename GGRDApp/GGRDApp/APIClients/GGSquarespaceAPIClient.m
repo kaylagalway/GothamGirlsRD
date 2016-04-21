@@ -7,7 +7,7 @@
 //
 
 #import "GGSquarespaceAPIClient.h"
-#import <UIKit/UIKit.h>
+
 
 NSString *const GGSquarespaceAPIClientConstants_baseUrl = @"http://www.gothamgirlsrollerderby.com";
 NSString *const GGSquarespaceAPIClientConstants_urlResourceID_news = @"news";
@@ -15,7 +15,7 @@ NSString *const GGSquarespaceAPIClientConstants_urlParameter_format = @"format=j
 
 @implementation GGSquarespaceAPIClient
 
-+ (void)fetchNewsStoryDictionariesWithCompletion: (void(^)(NSArray *stories))completion {
++ (void)fetchNewsStoryDictionariesWithCompletion:(void(^)(NSArray *stories))completion {
    
    NSString *urlString = [NSString stringWithFormat:@"%@/%@/?%@", GGSquarespaceAPIClientConstants_baseUrl, GGSquarespaceAPIClientConstants_urlResourceID_news, GGSquarespaceAPIClientConstants_urlParameter_format];
    
@@ -31,7 +31,4 @@ NSString *const GGSquarespaceAPIClientConstants_urlParameter_format = @"format=j
 
 @end
 
-//
-//NSString *htmlString = articleDict[@"body"];
-//NSAttributedString *formattedString = [[NSAttributedString alloc] initWithData:[htmlString dataUsingEncoding:NSUTF8StringEncoding] options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: [NSNumber numberWithInt:NSUTF8StringEncoding]} documentAttributes:nil error:nil];
-//[newStories addObject:formattedString];
+
