@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NewsTableViewControllerDataSource : NSObject
+@interface GGNewsTableViewControllerDataSource : NSObject
+
 
 @end

@@ -9,15 +9,15 @@
 /* Begin PBXBuildFile section */
 		45D8DFD11CC86D0900D89ED5 /* GGSquarespaceAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D8DFD01CC86D0900D89ED5 /* GGSquarespaceAPIClient.m */; };
 		45D8DFD71CC872F600D89ED5 /* GGNewsArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D8DFD61CC872F600D89ED5 /* GGNewsArticle.m */; };
+		45D8DFDA1CC879F800D89ED5 /* GGNewsTableViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D8DFD91CC879F800D89ED5 /* GGNewsTableViewControllerDataSource.m */; };
+		45D8DFDD1CC87A0700D89ED5 /* GGNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D8DFDC1CC87A0700D89ED5 /* GGNewsViewController.m */; };
+		45D8DFDF1CC87A1300D89ED5 /* GGNewsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45D8DFDE1CC87A1300D89ED5 /* GGNewsViewController.storyboard */; };
 		CD5AB1701CC86492006BF16A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB16F1CC86492006BF16A /* main.m */; };
 		CD5AB1731CC86492006BF16A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB1721CC86492006BF16A /* AppDelegate.m */; };
 		CD5AB17B1CC86492006BF16A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5AB17A1CC86492006BF16A /* Assets.xcassets */; };
 		CD5AB17E1CC86492006BF16A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD5AB17C1CC86492006BF16A /* LaunchScreen.storyboard */; };
 		CD5AB1891CC86493006BF16A /* GGRDAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB1881CC86493006BF16A /* GGRDAppTests.m */; };
 		CD5AB1941CC86493006BF16A /* GGRDAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB1931CC86493006BF16A /* GGRDAppUITests.m */; };
-		CD5AB1B31CC86B86006BF16A /* NewsTableViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB1B21CC86B86006BF16A /* NewsTableViewControllerDataSource.m */; };
-		CD5AB1B71CC86B9D006BF16A /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB1B51CC86B9D006BF16A /* NewsViewController.m */; };
-		CD5AB1BA1CC86BB7006BF16A /* NewsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD5AB1B91CC86BB7006BF16A /* NewsViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +42,11 @@
 		45D8DFD01CC86D0900D89ED5 /* GGSquarespaceAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GGSquarespaceAPIClient.m; path = APIClients/GGSquarespaceAPIClient.m; sourceTree = "<group>"; };
 		45D8DFD51CC872F600D89ED5 /* GGNewsArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GGNewsArticle.h; path = Models/GGNewsArticle.h; sourceTree = "<group>"; };
 		45D8DFD61CC872F600D89ED5 /* GGNewsArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GGNewsArticle.m; path = Models/GGNewsArticle.m; sourceTree = "<group>"; };
+		45D8DFD81CC879F800D89ED5 /* GGNewsTableViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GGNewsTableViewControllerDataSource.h; path = DataSources/GGNewsTableViewControllerDataSource.h; sourceTree = "<group>"; };
+		45D8DFD91CC879F800D89ED5 /* GGNewsTableViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GGNewsTableViewControllerDataSource.m; path = DataSources/GGNewsTableViewControllerDataSource.m; sourceTree = "<group>"; };
+		45D8DFDB1CC87A0700D89ED5 /* GGNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GGNewsViewController.h; path = GGRDApp/ViewControllers/GGNewsViewController.h; sourceTree = "<group>"; };
+		45D8DFDC1CC87A0700D89ED5 /* GGNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GGNewsViewController.m; path = GGRDApp/ViewControllers/GGNewsViewController.m; sourceTree = "<group>"; };
+		45D8DFDE1CC87A1300D89ED5 /* GGNewsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = GGNewsViewController.storyboard; path = GGRDApp/ViewControllers/StoryboardFiles/GGNewsViewController.storyboard; sourceTree = "<group>"; };
 		CD5AB16B1CC86492006BF16A /* GGRDApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGRDApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5AB16F1CC86492006BF16A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD5AB1711CC86492006BF16A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -55,11 +60,6 @@
 		CD5AB18F1CC86493006BF16A /* GGRDAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GGRDAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5AB1931CC86493006BF16A /* GGRDAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGRDAppUITests.m; sourceTree = "<group>"; };
 		CD5AB1951CC86493006BF16A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD5AB1B11CC86B86006BF16A /* NewsTableViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsTableViewControllerDataSource.h; path = DataSources/NewsTableViewControllerDataSource.h; sourceTree = "<group>"; };
-		CD5AB1B21CC86B86006BF16A /* NewsTableViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsTableViewControllerDataSource.m; path = DataSources/NewsTableViewControllerDataSource.m; sourceTree = "<group>"; };
-		CD5AB1B41CC86B9D006BF16A /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsViewController.h; path = GGRDApp/ViewControllers/NewsViewController.h; sourceTree = "<group>"; };
-		CD5AB1B51CC86B9D006BF16A /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsViewController.m; path = GGRDApp/ViewControllers/NewsViewController.m; sourceTree = "<group>"; };
-		CD5AB1B91CC86BB7006BF16A /* NewsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = NewsViewController.storyboard; path = GGRDApp/ViewControllers/StoryboardFiles/NewsViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +154,8 @@
 		CD5AB1A11CC866D7006BF16A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CD5AB1B41CC86B9D006BF16A /* NewsViewController.h */,
-				CD5AB1B51CC86B9D006BF16A /* NewsViewController.m */,
+				45D8DFDB1CC87A0700D89ED5 /* GGNewsViewController.h */,
+				45D8DFDC1CC87A0700D89ED5 /* GGNewsViewController.m */,
 				CD5AB1A51CC866F8006BF16A /* StoryboardFiles */,
 			);
 			name = ViewControllers;
@@ -165,7 +165,7 @@
 		CD5AB1A51CC866F8006BF16A /* StoryboardFiles */ = {
 			isa = PBXGroup;
 			children = (
-				CD5AB1B91CC86BB7006BF16A /* NewsViewController.storyboard */,
+				45D8DFDE1CC87A1300D89ED5 /* GGNewsViewController.storyboard */,
 			);
 			name = StoryboardFiles;
 			sourceTree = "<group>";
@@ -182,8 +182,8 @@
 		CD5AB1AB1CC86A28006BF16A /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				CD5AB1B11CC86B86006BF16A /* NewsTableViewControllerDataSource.h */,
-				CD5AB1B21CC86B86006BF16A /* NewsTableViewControllerDataSource.m */,
+				45D8DFD81CC879F800D89ED5 /* GGNewsTableViewControllerDataSource.h */,
+				45D8DFD91CC879F800D89ED5 /* GGNewsTableViewControllerDataSource.m */,
 			);
 			name = DataSources;
 			sourceTree = "<group>";
@@ -310,9 +310,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD5AB1BA1CC86BB7006BF16A /* NewsViewController.storyboard in Resources */,
 				CD5AB17E1CC86492006BF16A /* LaunchScreen.storyboard in Resources */,
 				CD5AB17B1CC86492006BF16A /* Assets.xcassets in Resources */,
+				45D8DFDF1CC87A1300D89ED5 /* GGNewsViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,10 +339,10 @@
 			files = (
 				CD5AB1731CC86492006BF16A /* AppDelegate.m in Sources */,
 				CD5AB1701CC86492006BF16A /* main.m in Sources */,
-				CD5AB1B31CC86B86006BF16A /* NewsTableViewControllerDataSource.m in Sources */,
 				45D8DFD11CC86D0900D89ED5 /* GGSquarespaceAPIClient.m in Sources */,
-				CD5AB1B71CC86B9D006BF16A /* NewsViewController.m in Sources */,
+				45D8DFDA1CC879F800D89ED5 /* GGNewsTableViewControllerDataSource.m in Sources */,
 				45D8DFD71CC872F600D89ED5 /* GGNewsArticle.m in Sources */,
+				45D8DFDD1CC87A0700D89ED5 /* GGNewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
