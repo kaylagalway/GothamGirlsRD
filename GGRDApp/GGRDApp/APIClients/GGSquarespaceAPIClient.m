@@ -8,6 +8,7 @@
 
 #import "GGSquarespaceAPIClient.h"
 
+NSString *const GGSquarespaceAPIClientConstants_dictionaryKey_items = @"items";
 
 NSString *const GGSquarespaceAPIClientConstants_baseUrl = @"http://www.gothamgirlsrollerderby.com";
 NSString *const GGSquarespaceAPIClientConstants_urlResourceID_news = @"news";
@@ -22,7 +23,7 @@ NSString *const GGSquarespaceAPIClientConstants_urlParameter_format = @"format=j
    [[[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:urlString] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
       NSDictionary *jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
       NSMutableArray *newStories = [@[] mutableCopy];
-      for (NSDictionary *articleDict in jsonResponse[@"items"]) {
+      for (NSDictionary *articleDict in jsonResponse[GGSquarespaceAPIClientConstants_dictionaryKey_items]) {
          [newStories addObject: articleDict];
       }
       completion(newStories);
