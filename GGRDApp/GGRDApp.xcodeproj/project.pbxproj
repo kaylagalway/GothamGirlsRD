@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45D8DFD11CC86D0900D89ED5 /* GGSquarespaceAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 45D8DFD01CC86D0900D89ED5 /* GGSquarespaceAPIClient.m */; };
 		CD5AB1701CC86492006BF16A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB16F1CC86492006BF16A /* main.m */; };
 		CD5AB1731CC86492006BF16A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB1721CC86492006BF16A /* AppDelegate.m */; };
 		CD5AB17B1CC86492006BF16A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5AB17A1CC86492006BF16A /* Assets.xcassets */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45D8DFCF1CC86D0900D89ED5 /* GGSquarespaceAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GGSquarespaceAPIClient.h; path = APIClients/GGSquarespaceAPIClient.h; sourceTree = "<group>"; };
+		45D8DFD01CC86D0900D89ED5 /* GGSquarespaceAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GGSquarespaceAPIClient.m; path = APIClients/GGSquarespaceAPIClient.m; sourceTree = "<group>"; };
 		CD5AB16B1CC86492006BF16A /* GGRDApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GGRDApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5AB16F1CC86492006BF16A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD5AB1711CC86492006BF16A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -183,6 +186,8 @@
 		CD5AB1AC1CC86A36006BF16A /* APIClients */ = {
 			isa = PBXGroup;
 			children = (
+				45D8DFCF1CC86D0900D89ED5 /* GGSquarespaceAPIClient.h */,
+				45D8DFD01CC86D0900D89ED5 /* GGSquarespaceAPIClient.m */,
 			);
 			name = APIClients;
 			sourceTree = "<group>";
@@ -330,6 +335,7 @@
 				CD5AB1731CC86492006BF16A /* AppDelegate.m in Sources */,
 				CD5AB1701CC86492006BF16A /* main.m in Sources */,
 				CD5AB1B31CC86B86006BF16A /* NewsTableViewControllerDataSource.m in Sources */,
+				45D8DFD11CC86D0900D89ED5 /* GGSquarespaceAPIClient.m in Sources */,
 				CD5AB1B71CC86B9D006BF16A /* NewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
