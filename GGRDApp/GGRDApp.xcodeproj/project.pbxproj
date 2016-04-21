@@ -13,9 +13,9 @@
 		CD5AB17E1CC86492006BF16A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD5AB17C1CC86492006BF16A /* LaunchScreen.storyboard */; };
 		CD5AB1891CC86493006BF16A /* GGRDAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB1881CC86493006BF16A /* GGRDAppTests.m */; };
 		CD5AB1941CC86493006BF16A /* GGRDAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB1931CC86493006BF16A /* GGRDAppUITests.m */; };
-		CD5AB1A41CC866F2006BF16A /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB1A31CC866F2006BF16A /* NewsViewController.m */; };
-		CD5AB1A91CC86749006BF16A /* NewsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD5AB1A81CC86749006BF16A /* NewsViewController.storyboard */; };
-		CD5AB1B01CC86A72006BF16A /* NewsTableViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB1AF1CC86A72006BF16A /* NewsTableViewControllerDataSource.m */; };
+		CD5AB1B31CC86B86006BF16A /* NewsTableViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB1B21CC86B86006BF16A /* NewsTableViewControllerDataSource.m */; };
+		CD5AB1B71CC86B9D006BF16A /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB1B51CC86B9D006BF16A /* NewsViewController.m */; };
+		CD5AB1BA1CC86BB7006BF16A /* NewsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD5AB1B91CC86BB7006BF16A /* NewsViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,11 +49,11 @@
 		CD5AB18F1CC86493006BF16A /* GGRDAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GGRDAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5AB1931CC86493006BF16A /* GGRDAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGRDAppUITests.m; sourceTree = "<group>"; };
 		CD5AB1951CC86493006BF16A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD5AB1A21CC866F2006BF16A /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
-		CD5AB1A31CC866F2006BF16A /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
-		CD5AB1A81CC86749006BF16A /* NewsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewsViewController.storyboard; sourceTree = "<group>"; };
-		CD5AB1AE1CC86A72006BF16A /* NewsTableViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewControllerDataSource.h; sourceTree = "<group>"; };
-		CD5AB1AF1CC86A72006BF16A /* NewsTableViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewControllerDataSource.m; sourceTree = "<group>"; };
+		CD5AB1B11CC86B86006BF16A /* NewsTableViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsTableViewControllerDataSource.h; path = DataSources/NewsTableViewControllerDataSource.h; sourceTree = "<group>"; };
+		CD5AB1B21CC86B86006BF16A /* NewsTableViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsTableViewControllerDataSource.m; path = DataSources/NewsTableViewControllerDataSource.m; sourceTree = "<group>"; };
+		CD5AB1B41CC86B9D006BF16A /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsViewController.h; path = GGRDApp/ViewControllers/NewsViewController.h; sourceTree = "<group>"; };
+		CD5AB1B51CC86B9D006BF16A /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsViewController.m; path = GGRDApp/ViewControllers/NewsViewController.m; sourceTree = "<group>"; };
+		CD5AB1B91CC86BB7006BF16A /* NewsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = NewsViewController.storyboard; path = GGRDApp/ViewControllers/StoryboardFiles/NewsViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,8 +148,8 @@
 		CD5AB1A11CC866D7006BF16A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CD5AB1A21CC866F2006BF16A /* NewsViewController.h */,
-				CD5AB1A31CC866F2006BF16A /* NewsViewController.m */,
+				CD5AB1B41CC86B9D006BF16A /* NewsViewController.h */,
+				CD5AB1B51CC86B9D006BF16A /* NewsViewController.m */,
 				CD5AB1A51CC866F8006BF16A /* StoryboardFiles */,
 			);
 			name = ViewControllers;
@@ -159,7 +159,7 @@
 		CD5AB1A51CC866F8006BF16A /* StoryboardFiles */ = {
 			isa = PBXGroup;
 			children = (
-				CD5AB1A81CC86749006BF16A /* NewsViewController.storyboard */,
+				CD5AB1B91CC86BB7006BF16A /* NewsViewController.storyboard */,
 			);
 			name = StoryboardFiles;
 			sourceTree = "<group>";
@@ -174,8 +174,8 @@
 		CD5AB1AB1CC86A28006BF16A /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				CD5AB1AE1CC86A72006BF16A /* NewsTableViewControllerDataSource.h */,
-				CD5AB1AF1CC86A72006BF16A /* NewsTableViewControllerDataSource.m */,
+				CD5AB1B11CC86B86006BF16A /* NewsTableViewControllerDataSource.h */,
+				CD5AB1B21CC86B86006BF16A /* NewsTableViewControllerDataSource.m */,
 			);
 			name = DataSources;
 			sourceTree = "<group>";
@@ -300,9 +300,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD5AB1BA1CC86BB7006BF16A /* NewsViewController.storyboard in Resources */,
 				CD5AB17E1CC86492006BF16A /* LaunchScreen.storyboard in Resources */,
 				CD5AB17B1CC86492006BF16A /* Assets.xcassets in Resources */,
-				CD5AB1A91CC86749006BF16A /* NewsViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,10 +327,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD5AB1A41CC866F2006BF16A /* NewsViewController.m in Sources */,
-				CD5AB1B01CC86A72006BF16A /* NewsTableViewControllerDataSource.m in Sources */,
 				CD5AB1731CC86492006BF16A /* AppDelegate.m in Sources */,
 				CD5AB1701CC86492006BF16A /* main.m in Sources */,
+				CD5AB1B31CC86B86006BF16A /* NewsTableViewControllerDataSource.m in Sources */,
+				CD5AB1B71CC86B9D006BF16A /* NewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
