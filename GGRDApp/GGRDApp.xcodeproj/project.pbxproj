@@ -15,6 +15,7 @@
 		CD5AB1941CC86493006BF16A /* GGRDAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB1931CC86493006BF16A /* GGRDAppUITests.m */; };
 		CD5AB1A41CC866F2006BF16A /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB1A31CC866F2006BF16A /* NewsViewController.m */; };
 		CD5AB1A91CC86749006BF16A /* NewsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD5AB1A81CC86749006BF16A /* NewsViewController.storyboard */; };
+		CD5AB1B01CC86A72006BF16A /* NewsTableViewControllerDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB1AF1CC86A72006BF16A /* NewsTableViewControllerDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		CD5AB1A21CC866F2006BF16A /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		CD5AB1A31CC866F2006BF16A /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		CD5AB1A81CC86749006BF16A /* NewsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewsViewController.storyboard; sourceTree = "<group>"; };
+		CD5AB1AE1CC86A72006BF16A /* NewsTableViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewControllerDataSource.h; sourceTree = "<group>"; };
+		CD5AB1AF1CC86A72006BF16A /* NewsTableViewControllerDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewControllerDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +84,6 @@
 		CD5AB1621CC86492006BF16A = {
 			isa = PBXGroup;
 			children = (
-				CD5AB1A11CC866D7006BF16A /* ViewControllers */,
 				CD5AB16D1CC86492006BF16A /* GGRDApp */,
 				CD5AB1871CC86493006BF16A /* GGRDAppTests */,
 				CD5AB1921CC86493006BF16A /* GGRDAppUITests */,
@@ -102,6 +104,11 @@
 		CD5AB16D1CC86492006BF16A /* GGRDApp */ = {
 			isa = PBXGroup;
 			children = (
+				CD5AB1AD1CC86A3E006BF16A /* Views */,
+				CD5AB1AC1CC86A36006BF16A /* APIClients */,
+				CD5AB1AB1CC86A28006BF16A /* DataSources */,
+				CD5AB1AA1CC86A1B006BF16A /* Models */,
+				CD5AB1A11CC866D7006BF16A /* ViewControllers */,
 				CD5AB1711CC86492006BF16A /* AppDelegate.h */,
 				CD5AB1721CC86492006BF16A /* AppDelegate.m */,
 				CD5AB17A1CC86492006BF16A /* Assets.xcassets */,
@@ -146,6 +153,7 @@
 				CD5AB1A51CC866F8006BF16A /* StoryboardFiles */,
 			);
 			name = ViewControllers;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		CD5AB1A51CC866F8006BF16A /* StoryboardFiles */ = {
@@ -154,6 +162,36 @@
 				CD5AB1A81CC86749006BF16A /* NewsViewController.storyboard */,
 			);
 			name = StoryboardFiles;
+			sourceTree = "<group>";
+		};
+		CD5AB1AA1CC86A1B006BF16A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		CD5AB1AB1CC86A28006BF16A /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				CD5AB1AE1CC86A72006BF16A /* NewsTableViewControllerDataSource.h */,
+				CD5AB1AF1CC86A72006BF16A /* NewsTableViewControllerDataSource.m */,
+			);
+			name = DataSources;
+			sourceTree = "<group>";
+		};
+		CD5AB1AC1CC86A36006BF16A /* APIClients */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = APIClients;
+			sourceTree = "<group>";
+		};
+		CD5AB1AD1CC86A3E006BF16A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD5AB1A41CC866F2006BF16A /* NewsViewController.m in Sources */,
+				CD5AB1B01CC86A72006BF16A /* NewsTableViewControllerDataSource.m in Sources */,
 				CD5AB1731CC86492006BF16A /* AppDelegate.m in Sources */,
 				CD5AB1701CC86492006BF16A /* main.m in Sources */,
 			);
