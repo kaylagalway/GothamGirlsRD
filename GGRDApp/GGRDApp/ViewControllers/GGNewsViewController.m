@@ -6,14 +6,14 @@
 //  Copyright © 2016 edu.self. All rights reserved.
 //
 
-#import "NewsViewController.h"
+#import "GGNewsViewController.h"
 
-@interface NewsViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface GGNewsViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *newsTableView;
 
 @end
 
-@implementation NewsViewController
+@implementation GGNewsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
