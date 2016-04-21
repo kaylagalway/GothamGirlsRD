@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NewsViewController.h
 //  GGRDApp
 //
 //  Created by Kayla Galway on 4/20/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface NewsViewController : UIViewController
 
 @end
-

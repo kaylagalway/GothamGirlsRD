@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		CD5AB1701CC86492006BF16A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB16F1CC86492006BF16A /* main.m */; };
 		CD5AB1731CC86492006BF16A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB1721CC86492006BF16A /* AppDelegate.m */; };
-		CD5AB1761CC86492006BF16A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB1751CC86492006BF16A /* ViewController.m */; };
-		CD5AB1791CC86492006BF16A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD5AB1771CC86492006BF16A /* Main.storyboard */; };
 		CD5AB17B1CC86492006BF16A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5AB17A1CC86492006BF16A /* Assets.xcassets */; };
 		CD5AB17E1CC86492006BF16A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD5AB17C1CC86492006BF16A /* LaunchScreen.storyboard */; };
 		CD5AB1891CC86493006BF16A /* GGRDAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB1881CC86493006BF16A /* GGRDAppTests.m */; };
 		CD5AB1941CC86493006BF16A /* GGRDAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB1931CC86493006BF16A /* GGRDAppUITests.m */; };
+		CD5AB1A41CC866F2006BF16A /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD5AB1A31CC866F2006BF16A /* NewsViewController.m */; };
+		CD5AB1A91CC86749006BF16A /* NewsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD5AB1A81CC86749006BF16A /* NewsViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +39,6 @@
 		CD5AB16F1CC86492006BF16A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CD5AB1711CC86492006BF16A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CD5AB1721CC86492006BF16A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CD5AB1741CC86492006BF16A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CD5AB1751CC86492006BF16A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		CD5AB1781CC86492006BF16A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD5AB17A1CC86492006BF16A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD5AB17D1CC86492006BF16A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD5AB17F1CC86492006BF16A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +48,9 @@
 		CD5AB18F1CC86493006BF16A /* GGRDAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GGRDAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5AB1931CC86493006BF16A /* GGRDAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGRDAppUITests.m; sourceTree = "<group>"; };
 		CD5AB1951CC86493006BF16A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD5AB1A21CC866F2006BF16A /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		CD5AB1A31CC866F2006BF16A /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		CD5AB1A81CC86749006BF16A /* NewsViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewsViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +81,7 @@
 		CD5AB1621CC86492006BF16A = {
 			isa = PBXGroup;
 			children = (
+				CD5AB1A11CC866D7006BF16A /* ViewControllers */,
 				CD5AB16D1CC86492006BF16A /* GGRDApp */,
 				CD5AB1871CC86493006BF16A /* GGRDAppTests */,
 				CD5AB1921CC86493006BF16A /* GGRDAppUITests */,
@@ -103,9 +104,6 @@
 			children = (
 				CD5AB1711CC86492006BF16A /* AppDelegate.h */,
 				CD5AB1721CC86492006BF16A /* AppDelegate.m */,
-				CD5AB1741CC86492006BF16A /* ViewController.h */,
-				CD5AB1751CC86492006BF16A /* ViewController.m */,
-				CD5AB1771CC86492006BF16A /* Main.storyboard */,
 				CD5AB17A1CC86492006BF16A /* Assets.xcassets */,
 				CD5AB17C1CC86492006BF16A /* LaunchScreen.storyboard */,
 				CD5AB17F1CC86492006BF16A /* Info.plist */,
@@ -138,6 +136,24 @@
 				CD5AB1951CC86493006BF16A /* Info.plist */,
 			);
 			path = GGRDAppUITests;
+			sourceTree = "<group>";
+		};
+		CD5AB1A11CC866D7006BF16A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD5AB1A21CC866F2006BF16A /* NewsViewController.h */,
+				CD5AB1A31CC866F2006BF16A /* NewsViewController.m */,
+				CD5AB1A51CC866F8006BF16A /* StoryboardFiles */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CD5AB1A51CC866F8006BF16A /* StoryboardFiles */ = {
+			isa = PBXGroup;
+			children = (
+				CD5AB1A81CC86749006BF16A /* NewsViewController.storyboard */,
+			);
+			name = StoryboardFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,7 +264,7 @@
 			files = (
 				CD5AB17E1CC86492006BF16A /* LaunchScreen.storyboard in Resources */,
 				CD5AB17B1CC86492006BF16A /* Assets.xcassets in Resources */,
-				CD5AB1791CC86492006BF16A /* Main.storyboard in Resources */,
+				CD5AB1A91CC86749006BF16A /* NewsViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD5AB1761CC86492006BF16A /* ViewController.m in Sources */,
+				CD5AB1A41CC866F2006BF16A /* NewsViewController.m in Sources */,
 				CD5AB1731CC86492006BF16A /* AppDelegate.m in Sources */,
 				CD5AB1701CC86492006BF16A /* main.m in Sources */,
 			);
@@ -311,14 +327,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CD5AB1771CC86492006BF16A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CD5AB1781CC86492006BF16A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CD5AB17C1CC86492006BF16A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -499,6 +507,7 @@
 				CD5AB19A1CC86493006BF16A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD5AB19B1CC86493006BF16A /* Build configuration list for PBXNativeTarget "GGRDAppTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +516,7 @@
 				CD5AB19D1CC86493006BF16A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CD5AB19E1CC86493006BF16A /* Build configuration list for PBXNativeTarget "GGRDAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +525,7 @@
 				CD5AB1A01CC86493006BF16A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
