@@ -7,6 +7,8 @@
 //
 
 #import "GGNewsViewController.h"
+#import "GGSquarespaceAPIClient.h"
+#import "GGNewsArticle.h"
 
 @interface GGNewsViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *newsTableView;
@@ -17,6 +19,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
+   
+   [GGSquarespaceAPIClient fetchNewsStoryDictionariesWithCompletion:^(NSArray *stories) {
+      NSMutableArray *articles = [@[] mutableCopy];
+      for (NSDictionary *newsDict in stories) {
+        [articles addObject: [[GGNewsArticle alloc]initWithDictionary: newsDict]];
+      }
+   }];
     // Do any additional setup after loading the view.
 }
 

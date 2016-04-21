@@ -9,6 +9,12 @@
 #import "GGNewsArticle.h"
 #import <UIKit/UIKit.h>
 
+NSString *const GGNewsArticleConstants_dictionaryKey_title = @"title";
+NSString *const GGNewsArticleConstants_dictionaryKey_body = @"body";
+NSString *const GGNewsArticleConstants_dictionaryKey_date = @"addedOn";
+NSString *const GGNewsArticleConstants_dictionaryKey_author = @"author";
+NSString *const GGNewsArticleConstants_dictionaryKey_displayName = @"displayName";
+
 @interface GGNewsArticle ()
 @property (strong, nonatomic, readwrite) NSString *title;
 @property (strong, nonatomic, readwrite) NSAttributedString *body;
@@ -22,10 +28,10 @@
 {
    self = [super init];
    if (self) {
-      _body = [GGNewsArticle attributedStringFromHTML: dictionary[@"body"]];
-      _title = [GGNewsArticle attributedStringFromHTML: dictionary[@"title"]].string;
-      _postDate =  [NSDate dateWithTimeIntervalSince1970: ([dictionary[@"addedOn"] doubleValue] / 1000)];
-      _poster = dictionary[@"author"][@"displayName"];
+      _title = [GGNewsArticle attributedStringFromHTML: dictionary[GGNewsArticleConstants_dictionaryKey_title]].string;
+      _body = [GGNewsArticle attributedStringFromHTML: dictionary[GGNewsArticleConstants_dictionaryKey_body]];
+      _postDate =  [NSDate dateWithTimeIntervalSince1970: ([dictionary[GGNewsArticleConstants_dictionaryKey_date] doubleValue] / 1000)];
+      _poster = dictionary[GGNewsArticleConstants_dictionaryKey_author][GGNewsArticleConstants_dictionaryKey_displayName];
    }
    return self;
 }
