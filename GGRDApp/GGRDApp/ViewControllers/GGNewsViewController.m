@@ -9,9 +9,11 @@
 #import "GGNewsViewController.h"
 #import "GGSquarespaceAPIClient.h"
 #import "GGNewsArticle.h"
+#import "GGNewsTableViewControllerDataSource.h"
 
-@interface GGNewsViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface GGNewsViewController () <UITableViewDelegate, UITableViewDataSource, GGNewsTableViewControllerDataSourceDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *newsTableView;
+@property (strong, nonatomic) GGNewsTableViewControllerDataSource *newsDataSource;
 
 @end
 
@@ -19,27 +21,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
-   
-   [GGSquarespaceAPIClient fetchNewsStoryDictionariesWithCompletion:^(NSArray *stories) {
-      NSMutableArray *articles = [@[] mutableCopy];
-      for (NSDictionary *newsDict in stories) {
-        [articles addObject: [[GGNewsArticle alloc]initWithDictionary: newsDict]];
-      }
-   }];
+    self.newsTableView.dataSource = self;
+    self.newsTableView.delegate = self;
+    self.newsDataSource = [[GGNewsTableViewControllerDataSource alloc]init];
+    self.newsDataSource.delegate = self;
+    [self.newsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    
+    [self.newsDataSource reloadData];
     // Do any additional setup after loading the view.
 }
 
+- (void)dataSourceDidLoad {
+    dispatch_async(dispatch_get_main_queue(), ^{
+    [self.newsTableView reloadData];
+    });
+}
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    cell.textLabel.text = [self.newsDataSource newsArticleForIndexPath:indexPath].title;
+    return cell;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
+    return [self.newsDataSource numberOfSections];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [self.newsDataSource numberOfRowsInSection:section];
 }
 
 /*
