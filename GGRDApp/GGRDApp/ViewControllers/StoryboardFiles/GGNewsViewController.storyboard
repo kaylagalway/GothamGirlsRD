@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="36a-7v-RgX">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--News View Controller-->
@@ -17,16 +19,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sx1-lu-Gfh">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="240" width="600" height="360"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="gotham" translatesAutoresizingMaskIntoConstraints="NO" id="bVx-Iy-mrn" userLabel="Banner Image">
+                                <rect key="frame" x="0.0" y="20" width="600" height="171"/>
+                            </imageView>
+                            <tabBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" barStyle="black" itemPositioning="fill" translatesAutoresizingMaskIntoConstraints="NO" id="cJN-oA-GUF" customClass="GGMainTabBar">
+                                <rect key="frame" x="0.0" y="191" width="600" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Home" id="bBj-Aa-v5h"/>
+                                    <tabBarItem title="Teams" id="FY2-YE-BMc"/>
+                                    <tabBarItem title="Rules" id="BOs-Vs-oJ5"/>
+                                    <tabBarItem title="Tickets" id="vUV-2O-Vi1"/>
+                                </items>
+                            </tabBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="cJN-oA-GUF" firstAttribute="leading" secondItem="EAJ-dX-HMs" secondAttribute="leading" id="054-LA-WRz"/>
+                            <constraint firstItem="bVx-Iy-mrn" firstAttribute="trailing" secondItem="EAJ-dX-HMs" secondAttribute="trailing" id="1NT-zT-4Iw"/>
+                            <constraint firstItem="bVx-Iy-mrn" firstAttribute="leading" secondItem="EAJ-dX-HMs" secondAttribute="leading" id="9fT-pb-KAa"/>
+                            <constraint firstItem="cJN-oA-GUF" firstAttribute="bottom" secondItem="Sx1-lu-Gfh" secondAttribute="top" id="EAp-ys-5HQ"/>
+                            <constraint firstItem="bVx-Iy-mrn" firstAttribute="bottom" secondItem="cJN-oA-GUF" secondAttribute="top" id="K1B-Js-LYA"/>
                             <constraint firstItem="Sx1-lu-Gfh" firstAttribute="leading" secondItem="EAJ-dX-HMs" secondAttribute="leading" id="W84-wo-ndB"/>
-                            <constraint firstAttribute="trailing" secondItem="Sx1-lu-Gfh" secondAttribute="trailing" id="YHP-h3-w1R"/>
-                            <constraint firstItem="nFO-R1-vrx" firstAttribute="top" secondItem="Sx1-lu-Gfh" secondAttribute="bottom" id="acd-Bh-SaC"/>
-                            <constraint firstItem="Sx1-lu-Gfh" firstAttribute="top" secondItem="5hg-Rf-b4D" secondAttribute="bottom" id="yKm-NB-uJR"/>
+                            <constraint firstItem="cJN-oA-GUF" firstAttribute="trailing" secondItem="EAJ-dX-HMs" secondAttribute="trailing" id="XYD-hG-S5a"/>
+                            <constraint firstItem="bVx-Iy-mrn" firstAttribute="top" secondItem="5hg-Rf-b4D" secondAttribute="bottom" id="Y3I-9X-Vxc"/>
+                            <constraint firstItem="Sx1-lu-Gfh" firstAttribute="trailing" secondItem="EAJ-dX-HMs" secondAttribute="trailing" id="YHP-h3-w1R"/>
+                            <constraint firstItem="Sx1-lu-Gfh" firstAttribute="bottom" secondItem="nFO-R1-vrx" secondAttribute="top" id="acd-Bh-SaC"/>
+                            <constraint firstItem="Sx1-lu-Gfh" firstAttribute="height" secondItem="EAJ-dX-HMs" secondAttribute="height" multiplier="0.6" id="gvb-QG-ct9"/>
                         </constraints>
                     </view>
                     <connections>
@@ -38,4 +60,7 @@
             <point key="canvasLocation" x="261" y="274"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gotham" width="1440" height="600"/>
+    </resources>
 </document>

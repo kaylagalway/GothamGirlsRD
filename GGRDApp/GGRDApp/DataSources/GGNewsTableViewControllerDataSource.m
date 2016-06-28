@@ -29,6 +29,21 @@
 //problem with that is that when that happens and memory pointer is in block, strong reference is created
 
 
+/*
+ + (void)fetchNewsStoryDictionariesWithCompletion:(void(^)(NSArray *stories))completion {
+ 
+ NSString *urlString = [NSString stringWithFormat:@"%@/%@/?%@", GGSquarespaceAPIClientConstants_baseUrl, GGSquarespaceAPIClientConstants_urlResourceID_news, GGSquarespaceAPIClientConstants_urlParameter_format];
+ 
+ [[[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:urlString] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+ NSDictionary *jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+ NSMutableArray *newStories = [@[] mutableCopy];
+ for (NSDictionary *articleDict in jsonResponse[GGSquarespaceAPIClientConstants_dictionaryKey_items]) {
+ [newStories addObject: articleDict];
+ }
+ completion(newStories);
+ }] resume];
+ }*/ 
+
 -(void)reloadData
 {
     __weak typeof(self) weakSelf = self;

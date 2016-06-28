@@ -19,8 +19,7 @@ NSString *const GGNewsArticleConstants_dictionaryKey_displayName = @"displayName
 @property (strong, nonatomic, readwrite) NSString *title;
 @property (strong, nonatomic, readwrite) NSAttributedString *body;
 @property (strong, nonatomic, readwrite) NSDate *postDate;
-@property (strong, nonatomic, readwrite) NSString *poster;
-@end
+@property (strong, nonatomic, readwrite) NSString *poster; @end
 
 @implementation GGNewsArticle
 

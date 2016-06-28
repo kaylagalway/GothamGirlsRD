@@ -10,6 +10,7 @@
 #import "GGSquarespaceAPIClient.h"
 #import "GGNewsArticle.h"
 #import "GGNewsTableViewControllerDataSource.h"
+#import "GGNewsArticleDetailViewController.h"
 
 @interface GGNewsViewController () <UITableViewDelegate, UITableViewDataSource, GGNewsTableViewControllerDataSourceDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *newsTableView;
@@ -31,6 +32,9 @@
     // Do any additional setup after loading the view.
 }
 
+//[[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//(enter action code here)
+//}];
 - (void)dataSourceDidLoad {
     dispatch_async(dispatch_get_main_queue(), ^{
     [self.newsTableView reloadData];
@@ -51,14 +55,22 @@
     return [self.newsDataSource numberOfRowsInSection:section];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    GGNewsArticleDetailViewController *detailViewController = segue.destinationViewController;
+//    [segue destinationViewController];
+    NSIndexPath *indexPath = self.newsTableView.indexPathForSelectedRow;
+     detailViewController.tappedArticle = [self.newsDataSource newsArticleForIndexPath:indexPath];
 }
-*/
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [self.newsTableView cellForRowAtIndexPath:indexPath];
+    [self presentViewController:[[GGNewsArticleDetailViewController alloc]init] animated:NO completion:^{
+    }];
+}
+
 
 @end
