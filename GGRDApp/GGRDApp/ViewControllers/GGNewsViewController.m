@@ -11,10 +11,12 @@
 #import "GGNewsArticle.h"
 #import "GGNewsTableViewControllerDataSource.h"
 #import "GGNewsArticleDetailViewController.h"
+#import "GGNewsTableViewCell.h"
 
 @interface GGNewsViewController () <UITableViewDelegate, UITableViewDataSource, GGNewsTableViewControllerDataSourceDelegate>
-@property (weak, nonatomic) IBOutlet UITableView *newsTableView;
+@property (strong, nonatomic) IBOutlet UITableView *newsTableView;
 @property (strong, nonatomic) GGNewsTableViewControllerDataSource *newsDataSource;
+@property (strong, nonatomic) GGNewsTableViewCell *customNewsCell;
 
 @end
 
@@ -26,15 +28,12 @@
     self.newsTableView.delegate = self;
     self.newsDataSource = [[GGNewsTableViewControllerDataSource alloc]init];
     self.newsDataSource.delegate = self;
-    [self.newsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    [self.newsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"NewsCell"];
     
     [self.newsDataSource reloadData];
     // Do any additional setup after loading the view.
 }
 
-//[[NSOperationQueue mainQueue] addOperationWithBlock:^{
-//(enter action code here)
-//}];
 - (void)dataSourceDidLoad {
     dispatch_async(dispatch_get_main_queue(), ^{
     [self.newsTableView reloadData];
@@ -42,10 +41,11 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    GGNewsTableViewCell *cell = (GGNewsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"NewsCell"];
     cell.textLabel.text = [self.newsDataSource newsArticleForIndexPath:indexPath].title;
     return cell;
 }
+
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [self.newsDataSource numberOfSections];
@@ -55,22 +55,32 @@
     return [self.newsDataSource numberOfRowsInSection:section];
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 100;
+}
+
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    GGNewsArticleDetailViewController *detailViewController = segue.destinationViewController;
-//    [segue destinationViewController];
-    NSIndexPath *indexPath = self.newsTableView.indexPathForSelectedRow;
-     detailViewController.tappedArticle = [self.newsDataSource newsArticleForIndexPath:indexPath];
-}
+//    [self.newsTableView registerNib:[UINib nibWithNibName:@"NewsTableViewCell.xib" bundle:nil] forCellReuseIdentifier:@"Cell"];
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [self.newsTableView cellForRowAtIndexPath:indexPath];
-    [self presentViewController:[[GGNewsArticleDetailViewController alloc]init] animated:NO completion:^{
-    }];
-}
+//[[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//(enter action code here)
+//}];
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    GGNewsArticleDetailViewController *detailViewController = segue.destinationViewController;
+////    [segue destinationViewController];
+//    NSIndexPath *indexPath = self.newsTableView.indexPathForSelectedRow;
+//     detailViewController.tappedArticle = [self.newsDataSource newsArticleForIndexPath:indexPath];
+//}
+
+//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    UITableViewCell *cell = [self.newsTableView cellForRowAtIndexPath:indexPath];
+//    [self presentViewController:[[GGNewsArticleDetailViewController alloc]init] animated:NO completion:^{
+//    }];
+//}
 
 
 @end

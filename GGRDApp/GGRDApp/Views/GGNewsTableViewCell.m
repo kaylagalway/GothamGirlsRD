@@ -10,36 +10,38 @@
 
 @implementation GGNewsTableViewCell
 
--(instancetype)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
+
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
-    if (self)
-    {
-        [self awakeFromNib];
+    if (self) {
+        _numberLabel = [UILabel new];
+        [self addSubview:self.numberLabel];
+        [self addNumberLabelConstraints];
     }
     return self;
 }
 
--(instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
+-(void)addNumberLabelConstraints {
+    self.numberLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.numberLabel.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor
+                                                   constant:(self.contentView.frame.size.width) / 10.0].active = YES;
+    [self.numberLabel.topAnchor constraintEqualToAnchor:self.contentView.topAnchor
+                                               constant:(self.contentView.frame.size.height) / 10.0].active = YES;
+    [self.numberLabel setFont:[UIFont fontWithName:@"Helvetica" size:12]];
+    self.numberLabel.numberOfLines = 5;
+    self.numberLabel.lineBreakMode = NSLineBreakByWordWrapping;
     
-    if (self)
-    {
-        [self awakeFromNib];
-    }
-    return self;
 }
 
-- (void)awakeFromNib {
-    
-    {
-        [[NSBundle mainBundle] loadNibNamed:@"NewsTableViewCell.xib" owner:self options:nil];
-        self.contentView.frame = self.bounds;
-    }
-    // Initialization code
-}
+//- (void)awakeFromNib {
+//
+//    {
+//        [[NSBundle mainBundle] loadNibNamed:@"NewsTableViewCell.xib" owner:self options:nil];
+//        self.contentView.frame = self.bounds;
+//    }
+//    // Initialization code
+//}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

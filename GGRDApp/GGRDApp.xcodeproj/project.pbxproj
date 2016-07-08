@@ -23,7 +23,6 @@
 		CD7E70691D1A44B000826965 /* GGMainTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7E70681D1A44B000826965 /* GGMainTabBar.xib */; };
 		CD7E706C1D1A462F00826965 /* GGNewsArticleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E706B1D1A462F00826965 /* GGNewsArticleDetailViewController.m */; };
 		CDC304481CD06E4100A003F1 /* NewsTableViewSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC304471CD06E4100A003F1 /* NewsTableViewSectionHeader.xib */; };
-		CDC3044A1CD070EA00A003F1 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC304491CD070EA00A003F1 /* NewsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +73,6 @@
 		CD7E706A1D1A462F00826965 /* GGNewsArticleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GGNewsArticleDetailViewController.h; path = GGRDApp/ViewControllers/GGNewsArticleDetailViewController.h; sourceTree = "<group>"; };
 		CD7E706B1D1A462F00826965 /* GGNewsArticleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GGNewsArticleDetailViewController.m; path = GGRDApp/ViewControllers/GGNewsArticleDetailViewController.m; sourceTree = "<group>"; };
 		CDC304471CD06E4100A003F1 /* NewsTableViewSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsTableViewSectionHeader.xib; sourceTree = "<group>"; };
-		CDC304491CD070EA00A003F1 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,7 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				CDC304471CD06E4100A003F1 /* NewsTableViewSectionHeader.xib */,
-				CDC304491CD070EA00A003F1 /* NewsTableViewCell.xib */,
 				45D8DFDE1CC87A1300D89ED5 /* GGNewsViewController.storyboard */,
 				CD7E70681D1A44B000826965 /* GGMainTabBar.xib */,
 			);
@@ -339,7 +336,6 @@
 				CD5AB17B1CC86492006BF16A /* Assets.xcassets in Resources */,
 				45D8DFDF1CC87A1300D89ED5 /* GGNewsViewController.storyboard in Resources */,
 				CD7E70691D1A44B000826965 /* GGMainTabBar.xib in Resources */,
-				CDC3044A1CD070EA00A003F1 /* NewsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

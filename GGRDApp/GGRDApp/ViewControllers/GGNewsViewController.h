@@ -10,4 +10,5 @@
 
 @interface GGNewsViewController : UIViewController
 
+
 @end

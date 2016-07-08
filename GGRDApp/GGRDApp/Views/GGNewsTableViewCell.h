@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface GGNewsTableViewCell : UITableViewCell
-@property (strong, nonatomic) IBOutlet UIView *newsTableViewCell;
+@property (strong, nonatomic) UILabel *numberLabel;
 
 @end
