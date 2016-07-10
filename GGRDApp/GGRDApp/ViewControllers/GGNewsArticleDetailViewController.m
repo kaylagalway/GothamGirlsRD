@@ -16,19 +16,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UILabel *helloLabel = [UILabel new];
+    helloLabel.text = @"Hello";
+    [self.view addSubview:helloLabel];
+    helloLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [helloLabel.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active= YES;
+    [helloLabel.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active = YES;
+    NSLog(@"in new viewcontroller");
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.view layoutSubviews];
     // Do any additional setup after loading the view.
 }
 
-- (void)addTitle {
-    UITextView *titleText = [[UITextView alloc]init];
-    titleText.text = self.tappedArticle.title;
-    [self.view addSubview:titleText];
-    [titleText setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [titleText.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active=YES;
-    [titleText.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active=YES;
-    
-    NSLog(@"Launching detail VC");
-}
+//- (void)addTitle {
+//    UITextView *titleText = [[UITextView alloc]init];
+//    titleText.text = self.tappedArticle.title;
+//    [self.view addSubview:titleText];
+//    [titleText setTranslatesAutoresizingMaskIntoConstraints:NO];
+//    [titleText.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor].active=YES;
+//    [titleText.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor].active=YES;
+//    
+//    NSLog(@"Launching detail VC");
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

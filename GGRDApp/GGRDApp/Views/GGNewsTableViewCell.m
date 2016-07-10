@@ -15,24 +15,66 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     
     if (self) {
-        _numberLabel = [UILabel new];
-        [self addSubview:self.numberLabel];
-        [self addNumberLabelConstraints];
+        _titleLabel = [UILabel new];
+        _bodyTextPreviewLabel = [UILabel new];
+        _dateLabel = [UILabel new];
+        [self setupTableViewCell];
+        [self layoutSubviews];
     }
     return self;
 }
 
--(void)addNumberLabelConstraints {
-    self.numberLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.numberLabel.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor
-                                                   constant:(self.contentView.frame.size.width) / 10.0].active = YES;
-    [self.numberLabel.topAnchor constraintEqualToAnchor:self.contentView.topAnchor
-                                               constant:(self.contentView.frame.size.height) / 10.0].active = YES;
-    [self.numberLabel setFont:[UIFont fontWithName:@"Helvetica" size:12]];
-    self.numberLabel.numberOfLines = 5;
-    self.numberLabel.lineBreakMode = NSLineBreakByWordWrapping;
+//You can set a width constraint
+//make an NSLayoutConstraint with ConstraintWithItem or VFL
+//and set width equal to superview
+//with a constant of 0.5
+
+-(void)setupTableViewCell {
+    [self addSubview:self.bodyTextPreviewLabel];
+    [self addSubview:self.titleLabel];
+    [self addSubview:self.dateLabel];
+    [self createDateLabel];
+    [self createTitleLabel];
+    [self createBodyTextPreviewLabel];
+    self.backgroundColor = [UIColor whiteColor];}
+
+-(void)createTitleLabel {
+    self.titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.titleLabel.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:25].active = YES;
+    [self.titleLabel.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:-25].active = YES;
+    [self.titleLabel.topAnchor constraintEqualToAnchor:self.topAnchor constant:25].active = YES;
     
+    [self.titleLabel setFont:[UIFont fontWithName:@"Georgia" size:20]];
+    self.titleLabel.textColor = [UIColor blackColor];
+    self.titleLabel.numberOfLines = 5;
+    self.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
 }
+
+-(void)createBodyTextPreviewLabel {
+    self.bodyTextPreviewLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.bodyTextPreviewLabel.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:25].active = YES;
+    [self.bodyTextPreviewLabel.trailingAnchor constraintEqualToAnchor:self.contentView.trailingAnchor constant:-25].active = YES;
+    [self.bodyTextPreviewLabel.topAnchor constraintEqualToAnchor:self.titleLabel.bottomAnchor constant:10].active = YES;
+    
+    [self.bodyTextPreviewLabel setFont:[UIFont fontWithName:@"Georgia" size:14]];
+    self.bodyTextPreviewLabel.textColor = [UIColor darkGrayColor];
+    self.bodyTextPreviewLabel.numberOfLines = 5;
+    self.bodyTextPreviewLabel.lineBreakMode = NSLineBreakByWordWrapping;
+}
+
+-(void)createDateLabel {
+    self.dateLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.dateLabel.leadingAnchor constraintEqualToAnchor:self.contentView.leadingAnchor constant:25].active = YES;
+    [self.dateLabel.bottomAnchor constraintEqualToAnchor:self.bottomAnchor constant:-15].active = YES;
+    [self.dateLabel setFont:[UIFont fontWithName:@"Georgia" size:12]];
+    self.dateLabel.textColor = [UIColor redColor];
+}
+
+
+//-(void)layoutSubviews {
+//    [super layoutSubviews];
+//    self.numberLabel.preferredMaxLayoutWidth = self.bounds.size.width;
+//}
 
 //- (void)awakeFromNib {
 //
