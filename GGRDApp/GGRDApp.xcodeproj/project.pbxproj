@@ -22,6 +22,7 @@
 		CD7E70671D1A384700826965 /* GGMainTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E70661D1A384700826965 /* GGMainTabBar.m */; };
 		CD7E70691D1A44B000826965 /* GGMainTabBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7E70681D1A44B000826965 /* GGMainTabBar.xib */; };
 		CD7E706C1D1A462F00826965 /* GGNewsArticleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7E706B1D1A462F00826965 /* GGNewsArticleDetailViewController.m */; };
+		CDB9FCD81D31E93A00B439CA /* GGNewsArticleBodyView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB9FCD71D31E93A00B439CA /* GGNewsArticleBodyView.m */; };
 		CDC304481CD06E4100A003F1 /* NewsTableViewSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDC304471CD06E4100A003F1 /* NewsTableViewSectionHeader.xib */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,8 @@
 		CD7E70681D1A44B000826965 /* GGMainTabBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GGMainTabBar.xib; sourceTree = "<group>"; };
 		CD7E706A1D1A462F00826965 /* GGNewsArticleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GGNewsArticleDetailViewController.h; path = GGRDApp/ViewControllers/GGNewsArticleDetailViewController.h; sourceTree = "<group>"; };
 		CD7E706B1D1A462F00826965 /* GGNewsArticleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GGNewsArticleDetailViewController.m; path = GGRDApp/ViewControllers/GGNewsArticleDetailViewController.m; sourceTree = "<group>"; };
+		CDB9FCD61D31E93A00B439CA /* GGNewsArticleBodyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GGNewsArticleBodyView.h; path = Views/GGNewsArticleBodyView.h; sourceTree = "<group>"; };
+		CDB9FCD71D31E93A00B439CA /* GGNewsArticleBodyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GGNewsArticleBodyView.m; path = Views/GGNewsArticleBodyView.m; sourceTree = "<group>"; };
 		CDC304471CD06E4100A003F1 /* NewsTableViewSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsTableViewSectionHeader.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,6 +224,8 @@
 				CD5D36471D19F18E00A94B73 /* GGNewsTableViewCell.m */,
 				CD7E70651D1A384700826965 /* GGMainTabBar.h */,
 				CD7E70661D1A384700826965 /* GGMainTabBar.m */,
+				CDB9FCD61D31E93A00B439CA /* GGNewsArticleBodyView.h */,
+				CDB9FCD71D31E93A00B439CA /* GGNewsArticleBodyView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -368,6 +373,7 @@
 				45D8DFD71CC872F600D89ED5 /* GGNewsArticle.m in Sources */,
 				CD7E706C1D1A462F00826965 /* GGNewsArticleDetailViewController.m in Sources */,
 				CD5D36481D19F18E00A94B73 /* GGNewsTableViewCell.m in Sources */,
+				CDB9FCD81D31E93A00B439CA /* GGNewsArticleBodyView.m in Sources */,
 				45D8DFDD1CC87A0700D89ED5 /* GGNewsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,6 +17,8 @@
 @property (strong, nonatomic) IBOutlet UITableView *newsTableView;
 @property (strong, nonatomic) GGNewsTableViewControllerDataSource *newsDataSource;
 @property (strong, nonatomic) GGNewsTableViewCell *customNewsCell;
+@property (strong, nonatomic) UIActivityIndicatorView *spinner;
+@property (strong, nonatomic) UILabel *loadingLabel;
 
 @end
 
@@ -29,11 +31,7 @@
     self.newsDataSource = [[GGNewsTableViewControllerDataSource alloc]init];
     self.newsDataSource.delegate = self;
     [self.newsTableView registerClass:[GGNewsTableViewCell class] forCellReuseIdentifier:@"NewsCell"];
-    //    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    //    spinner.frame = CGRectMake(0, 0, 24, 24);
-    //    [self.view addSubview:spinner];
-    //    [spinner startAnimating];
-    //    [spinner release];
+    [self addActivitySpinner];
     [self.newsDataSource reloadData];
     // Do any additional setup after loading the view.
 }
@@ -41,7 +39,38 @@
 - (void)dataSourceDidLoad {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.newsTableView reloadData];
+        self.newsTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        self.loadingLabel.alpha = 0;
+        [self.spinner stopAnimating];
+//        [UIView animateWithDuration:0.5 animations:^{
+//        }];
     });
+}
+
+
+-(void)addActivitySpinner {
+    self.newsTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.newsTableView.backgroundColor = [UIColor blackColor];
+    self.spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+//    self.spinner.transform = CGAffineTransformMakeScale(1.2f, 1.2f);
+    [self.newsTableView addSubview:self.spinner];
+    self.spinner.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.spinner startAnimating];
+    [self.spinner.centerXAnchor constraintEqualToAnchor:self.newsTableView.centerXAnchor].active = YES;
+    [self.spinner.centerYAnchor constraintEqualToAnchor:self.newsTableView.centerYAnchor constant:-50].active=YES;
+    [self addLoadingTableViewLabel];
+
+}
+
+-(void)addLoadingTableViewLabel {
+    _loadingLabel = [UILabel new];
+    self.loadingLabel.text = @"Loading...";
+    self.loadingLabel.font = [UIFont fontWithName:@"Georgia" size:16];
+    self.loadingLabel.textColor = [UIColor grayColor];
+    [self.newsTableView addSubview:self.loadingLabel];
+    self.loadingLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.loadingLabel.centerXAnchor constraintEqualToAnchor:self.newsTableView.centerXAnchor].active=YES;
+    [self.loadingLabel.centerYAnchor constraintEqualToAnchor:self.newsTableView.centerYAnchor].active=YES;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -60,7 +89,7 @@
         abbrevBodyTextString = [abbrevBodyTextString substringFromIndex:39];
     } else if ([abbrevBodyTextString containsString:@"Thomas"]){
         abbrevBodyTextString = [abbrevBodyTextString substringFromIndex:18];
-    } 
+    }
     cell.bodyTextPreviewLabel.text = [NSString stringWithFormat:@"%@ ...", abbrevBodyTextString];
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
@@ -69,6 +98,12 @@
     
     NSString *formattedDateString = [dateFormatter stringFromDate:[self.newsDataSource newsArticleForIndexPath:indexPath].postDate];
     cell.dateLabel.text = formattedDateString;
+}
+
+-(void)loadContent {
+    UIActivityIndicatorView *loadingTableView = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [self.newsTableView addSubview:loadingTableView];
+    [loadingTableView startAnimating];
 }
 
 
@@ -87,6 +122,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     GGNewsArticleDetailViewController *detailView = [[GGNewsArticleDetailViewController alloc]init];
     dispatch_async(dispatch_get_main_queue(), ^{
+        detailView.tappedArticle = [self.newsDataSource newsArticleForIndexPath:indexPath];
         [self presentViewController:detailView animated:YES completion:nil];
     });
 }

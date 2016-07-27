@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GGNewsArticle.h"
 
 @interface GGNewsArticleBodyView : UIView
+
+@property (strong, nonatomic) UILabel *currentTitleLabel;
+@property (strong, nonatomic) UIButton *returnButton;
+@property (strong, nonatomic) UITextView *articleBodyTextView;
+
+-(instancetype)initWithArticle:(GGNewsArticle *)currentArticle;
 
 @end
